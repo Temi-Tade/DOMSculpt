@@ -8,7 +8,7 @@ function Info() {
         Sculpt.create('img', {src: './public/DOMSculpt.png', alt: 'DOMSculpt', width: 250, loading: 'lazy'}),
     );
 
-    Sculpt.mount(logo)
+    Sculpt.mount(logo);
 }
 
 export default Info;

@@ -8,6 +8,9 @@ This tool will allow quick and efficient creation of Markup, allowing developers
 
 HTML elements are created in the form of `Sculpts` (think of it as pieces of HTML elements created with JavaScript). `Sculpts` are rendered and they return HTML Elements in the DOM as seen in the browser developer tools.
 
+## Prerequisites
+You should have an understanding of HTML and basic JavaScript before using this tool.
+
 ## How to use
 Oof, you might be thinking `npm install` again, right? Nah, we don't do that here.
 
@@ -33,17 +36,21 @@ README.md
 </pre>
 
 Next, you should delete the following files: 
-- `README.md` (optional)
+- `README.md`
+- `LICENSE`
 - `/public/DOMSculpt.png`
 - All `.js` files in the `src/Sculpts` directory
 
 as you would not be needing them. This step is optional but is necessary to keep your project folder clean.
 
-### USing DOMSculpt
+Copy all the contents of the DOMSculpt folder to the root of your project directory. Now we are good to go.
+
+### Using DOMSculpt
 In DOMSculpt, a `Sculpt` basically refers to an HTML element that is returned by JavaScript. This is what you will be creating during your development process. It has the following structure:
 
 <pre>
-import Sculpt from "../main.js";
+// in /src/Sculpts folder
+import Sculpt from "../../main.js";
 
 function SculptName(){
     var ElementVariable = Sculpt.create(
@@ -58,7 +65,7 @@ function SculptName(){
 export default SculptName;
 </pre>
 
-- `import Sculpt from "../main.js";` - this imports the Sculpt module for creating your HTML Elements
+- `import Sculpt from "../../main.js";` - this imports the Sculpt module for creating your HTML Elements
 - `function SculptName()` - `SculptName` is a function that returns the HTML Element (Sculpt) you want to create. You can give the function any name but it is always a good idea to give it a descriptive name. For example: `function Header(){...}`, `function Form(){...}`.
 - `var ElementVariable` - This identifies the `Sculpt` you are creating.
 - `export default SculptName;` - exports the Sculpt for use in `app.js`.
@@ -78,7 +85,7 @@ Let us create a simple Hello World application using DOMSculpt.
 
 <pre>
 // /src/H1.js
-import Sculpt from "../main.js"
+import Sculpt from "../../main.js"
 
 function H1(){
     var h1 = Sculpt.create(
@@ -105,7 +112,7 @@ Open the HTML file in the browser, what do you see? You can open DevTools in the
 To next a Sculpt, simply create a new `Sculpt` within a parent `Sculpt`'s `children` arguement.
 
 <pre>
-import Sculpt from "../main.js";
+import Sculpt from "../../main.js";
 
 function Header(){
     var header = Sculpt.create(
@@ -126,7 +133,7 @@ This way, you can import the `Header` sculpt and render it in `app.js`.
 Since Sculpts are regular JavaScript objects, functions can be written directly into them.
 
 <pre>
-import Sculpt from "../main.js";
+import Sculpt from "../../main.js";
 
 function AlertButton(){
     var btn = Sculpt.create(

@@ -1,4 +1,4 @@
-import Sculpt from "../main.js";
+import Sculpt from "../../main.js";
 
 function Controls() {
     let angle = 0;

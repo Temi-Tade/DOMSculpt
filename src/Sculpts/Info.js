@@ -1,4 +1,4 @@
-import Sculpt from "../main.js";
+import Sculpt from "../../main.js";
 
 function Info() {
     var logo = Sculpt.create(

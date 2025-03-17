@@ -8,8 +8,8 @@ function Goto() {
         Sculpt.create(
             'ul',
             {},
-            Sculpt.create('li', {}, Sculpt.create('a', {text: 'Visit Website', href: "https://example.com"})),
-            Sculpt.create('li', {}, Sculpt.create('a', {text: 'Read the Docs', href: "https://example.com"})),
+            Sculpt.create('li', {}, Sculpt.create('a', {text: 'Visit Website', href: "https://github.com/Temi-Tade/DOMSculpt/blob/main/README.md"})),
+            Sculpt.create('li', {}, Sculpt.create('a', {text: 'Read the Docs', href: "https://github.com/Temi-Tade/DOMSculpt/blob/main/README.md"})),
         )
     );
 

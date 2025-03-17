@@ -109,7 +109,7 @@ H1();
 Open the HTML file in the browser, what do you see? You can open DevTools in the browser and view the DOM tree under the "Elements" tab. See how it looks like a HTML file you would normally write.
 
 ### Nesting Sculpts.
-To next a Sculpt, simply create a new `Sculpt` within a parent `Sculpt`'s `children` arguement.
+To nest a Sculpt, simply create a new `Sculpt` within a parent `Sculpt`'s `children` arguement.
 
 <pre>
 import Sculpt from "../../main.js";

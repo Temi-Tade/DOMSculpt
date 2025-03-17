@@ -25,7 +25,7 @@ This should add a `DOMSculpt` directory with the  structure below to your projec
 <pre>
 assets/ => contains css files
 public/ => contains static files e.g. images
-src/ => contains source files for exported Sculpts 
+src/ => contains entry point and Sculpts source files
 index.html
 LICENSE
 main.js => contains DOMSculpt logic
@@ -35,7 +35,7 @@ README.md
 Next, you should delete the following files: 
 - `README.md` (optional)
 - `/public/DOMSculpt.png`
-- All `.js` files in the `src/` directory, except `app.js` which serves the entry point of your web application.
+- All `.js` files in the `src/Sculpts` directory
 
 as you would not be needing them. This step is optional but is necessary to keep your project folder clean.
 
@@ -60,8 +60,8 @@ export default SculptName;
 
 - `import Sculpt from "../main.js";` - this imports the Sculpt module for creating your HTML Elements
 - `function SculptName()` - `SculptName` is a function that returns the HTML Element (Sculpt) you want to create. You can give the function any name but it is always a good idea to give it a descriptive name. For example: `function Header(){...}`, `function Form(){...}`.
-- `var tagVariable` - This identifies the `Sculpt` you are creating.
-- `export default Sculpt Name;` - exports the Sculpt for use in `app.js`.
+- `var ElementVariable` - This identifies the `Sculpt` you are creating.
+- `export default SculptName;` - exports the Sculpt for use in `app.js`.
 
 `Sculpt` (HTML Elmemnt that DOMSculpt returns) is an object that has two methods: `create()` and `mount()`. 
 
@@ -71,7 +71,7 @@ export default SculptName;
 - `attributes` - An object. Sets the attributes of the HTML elements. e.g `{cls: "heading1", text: "Hello World."}`. `cls` in DOMSculpt resolves to `class` in HTML. `text` refers to the text within the opening and closing tags of the element. The `attributes` parameter can be left as `{}` if the element has no attributes.
 - `...children` - any other parameter after the `attributes` object refers to the children of the Sculpt which are basically nested HTML Elements. Interestingly, they are also created using `Sculpt.create()` and using its associated parameters.
 
-The `Sculpt.mount(tagVariable, target)` appends the Sculpt to the DOM tree which renders it. It takes two parameters. `tagVariable` (created earlier) and `target` (string) - the `id` of the element you are appending the Sculpt to in the DOM tree, by default, it is `"root"`.
+The `Sculpt.mount(ElementVariable, target)` appends the Sculpt to the DOM tree which renders it. It takes two parameters. `ElementVariable` (created earlier) and `target` (a string) - the `id` of the element you are appending the Sculpt to in the DOM tree, by default, it is `"root"`.
 
 ## Example Cases
 Let us create a simple Hello World application using DOMSculpt.
@@ -102,7 +102,7 @@ H1();
 Open the HTML file in the browser, what do you see? You can open DevTools in the browser and view the DOM tree under the "Elements" tab. See how it looks like a HTML file you would normally write.
 
 ### Nesting Sculpts.
-To next a Sculpt, simply create a new Sculpt within a parent Sculpt's `children` arguement.
+To next a Sculpt, simply create a new `Sculpt` within a parent `Sculpt`'s `children` arguement.
 
 <pre>
 import Sculpt from "../main.js";
@@ -120,7 +120,7 @@ function Header(){
 export default Header;
 </pre>
 
-This way, you can import the `Header` sculpt can render it in `app.js`.
+This way, you can import the `Header` sculpt and render it in `app.js`.
 
 ### Adding events
 Since Sculpts are regular JavaScript objects, functions can be written directly into them.
@@ -178,7 +178,7 @@ AlertButton("Welcome");
 AlertButton("Goodbye");
 </pre>
 
-Sculpts are reuseable pieces of HTML elements. Rather than writing another `button` element. You can simply render another `AlertButton` Sculpt. 
+Sculpts are reuseable pieces of UI (HTML elements). Rather than writing another `button` element. You can simply render another `AlertButton` Sculpt. 
 
 Also, Sculpts can take different parameters which confers various properties on the rendered HTML elements. Clicking the rendered buttons display different messages in the alert box. Guess what? We did not need to directly create two different `button` elements. DOMSculpt has done that. All we need do is to focus on their functionality.
 

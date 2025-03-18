@@ -17,33 +17,25 @@ Oof, you might be thinking `npm install` again, right? Nah, we don't do that her
 Like i mentioned earlier, the goal of this tool is to eliminate the need for writing HTML directly, Markup is generated with JavaScript instead, then rendered in the DOM, the use cases for this tool are for simple projects, nothing too complex and the developers who should be using this are the ones who **just started trying their hands out on Vanilla JavaScript and are yet to move to frameworks and libraries**. So if you are looking for an alternative to React or Angular, I am sorry but you are in the wrong place :).
 
 ### Installation 
-In your project directory, open the terminal and clone this repository:
+In any folder on your file system, open the terminal and clone the repository:
 
 <pre>
 git clone https://github.com/Temi-Tade/DOMSculpt.git
 </pre>
 
-This should add a `DOMSculpt` directory with the  structure below to your project folder:
+Next, navigate to the `DOMSculpt` folder and simply copy the `main.js` file in the root directory to your project folder.
+
+Optionally, you can structure your project folder like this:
 
 <pre>
-assets/ => contains css files
-public/ => contains static files e.g. images
+assets/ => for css files
+public/ => for static files e.g. images
 src/ => contains entry point and Sculpts source files
 index.html
-LICENSE
 main.js => contains DOMSculpt logic
-README.md
 </pre>
 
-Next, you should delete the following files: 
-- `README.md`
-- `LICENSE`
-- `/public/DOMSculpt.png`
-- All `.js` files in the `src/Sculpts` directory
-
-as you would not be needing them. This step is optional but is necessary to keep your project folder clean.
-
-Copy all the contents of the DOMSculpt folder to the root of your project directory. Now we are good to go.
+This step is optional but is necessary for a clean working directory. If you are skipping this step, take notes of the different file paths when importing files.
 
 ### Using DOMSculpt
 In DOMSculpt, a `Sculpt` basically refers to an HTML element that is returned by JavaScript. This is what you will be creating during your development process. It has the following structure:

@@ -5,7 +5,7 @@ function Info() {
         'div',
         {cls: 'logo', id: 'logo'},
         Sculpt.create('h2', {text: "DOMSculpt"}),
-        Sculpt.create('img', {src: './public/DOMSculpt.png', alt: 'DOMSculpt', width: 250, loading: 'lazy'}),
+        Sculpt.create('img', {src: './public/DOMSculpt.png', alt: 'DOMSculpt', width: 250, loading: 'lazy', draggable: 'false'}),
     );
 
     Sculpt.mount(logo);

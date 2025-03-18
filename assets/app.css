@@ -22,6 +22,11 @@ html{
     color: var(--color);
     height: 100dvh;
     accent-color: var(--theme);
+    user-select: none;
+}
+
+body{
+    overscroll-behavior-y: none;
 }
 
 #root{

@@ -1,3 +1,4 @@
+<!-- GitAds-Verify: RG5L3FNTGS6P9DZK98UGCC5LV71CCUPA -->
 # DOMSculpt
 I created DOMSculpt for the sole purpose of simplifying markup generation for building fast, functionality-driven and simple web pages and applications.
 

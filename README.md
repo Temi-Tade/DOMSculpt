@@ -38,6 +38,9 @@ main.js => contains DOMSculpt logic
 
 This step is optional but is necessary for a clean working directory. If you are skipping this step, take notes of the different file paths when importing files.
 
+## GitAds Sponsored
+[![Sponsored by GitAds](https://gitads.dev/v1/ad-serve?source=temi-tade/domsculpt@github)](https://gitads.dev/v1/ad-track?source=temi-tade/domsculpt@github)
+
 ### Using DOMSculpt
 In DOMSculpt, a `Sculpt` basically refers to an HTML element that is returned by JavaScript. This is what you will be creating during your development process. It has the following structure:
 
